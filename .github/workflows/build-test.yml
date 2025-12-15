@@ -25,15 +25,16 @@ jobs:
 
       - name: docker installieren
         run: |
+          sudo apt-get update
           sudo apt-get install -y docker.io
 
       - name: docker image bauen
         run: |
-          docker build -t oldschool-demo-Mika_Schulte-Image
+          docker build -t oldschool-demo-mika_schulte-image
 
       - name: container starten
         run: |
-          docker run -d --name demo_container oldschool-demo-Mika_Schulte-Image
+          docker run -d --name demo_container oldschool-demo-mika_schulte-image
 
       - name: ausgabe testen
         run: |
@@ -41,9 +42,9 @@ jobs:
 
       - name: Container starten & testen 
         run: | 
-          output=$(docker run oldschool-demo-Mika_Schulte-Image) 
+          output=$(docker run oldschool-demo-mika_schulte-image) 
           echo "$output" 
           if [ "$output" != "OldSchool GmbH – automatischer Build erfolgreich!" ]; then 
-            echo "❌ Test fehlgeschlagen!" 
+            echo "Test fehlgeschlagen!" 
             exit 1 
           fi 
