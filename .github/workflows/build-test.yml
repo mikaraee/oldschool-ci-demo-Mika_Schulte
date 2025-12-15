@@ -29,7 +29,7 @@ jobs:
 
       - name: docker image bauen
         run: |
-          docker build -t oldschool-demo-mika_schulte-image
+          docker build -t oldschool-demo-mika_schulte-image .
 
       - name: container starten
         run: |
