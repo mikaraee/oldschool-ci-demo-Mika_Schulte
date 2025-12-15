@@ -25,10 +25,7 @@ jobs:
 
       - name: docker installieren
         run: |
-          sudo apt-get remove containerd
-          sudo apt-get update
           sudo apt-get install -y docker.io
-          docker --version
 
       - name: docker image bauen
         run: |
