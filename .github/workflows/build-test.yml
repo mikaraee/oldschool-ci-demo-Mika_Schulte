@@ -31,12 +31,21 @@ jobs:
 
       - name: docker image bauen
         run: |
-          docker build -t oldschool-demo-Mika_Schulte-Image .
+          docker build -t oldschool-demo-Mika_Schulte-Image
 
       - name: container starten
         run: |
-          docker run -d --name demo_container oldschool-demo-image-name
+          docker run -d --name demo_container oldschool-demo-Mika_Schulte-Image
 
       - name: ausgabe testen
         run: |
           docker logs demo_container
+
+      - name: Container starten & testen 
+        run: | 
+          output=$(docker run oldschool-demo-Mika_Schulte-Image) 
+          echo "$output" 
+          if [ "$output" != "OldSchool GmbH – automatischer Build erfolgreich!" ]; then 
+            echo "❌ Test fehlgeschlagen!" 
+            exit 1 
+          fi 
