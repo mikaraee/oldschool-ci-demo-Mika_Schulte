@@ -12,4 +12,4 @@ schritte auf dem Weg ausgeführt werden müssen.
 Frage 3: "Was war für dich der schwierigste Teil dieser Aufgabe und warum?"
 
 Erster knackpunkt war die Installierung von Docker. Habe nicht gecheckt das wir das bereits installiert haben.
-Zweiter war
+Zweiter war es, dass ich die individuelle Message, bzw. die benennung des Image leicht verwechselt und vergessen habe.
