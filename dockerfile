@@ -1,6 +1,6 @@
 # Minimaler Alpine-Container 
 
-nginx alpine:latest 
+FROM alpine:latest 
 
  
 
